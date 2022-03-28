@@ -63,6 +63,9 @@
 		BB90EB5F27F216AA00099EE7 /* CitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DB37927F1DA3A0086BE5B /* CitiesVC.swift */; };
 		BB90EB6027F216DF00099EE7 /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0327AA27EF37FE0040026A /* CitiesPresenter.swift */; };
 		BB90EB6227F2192000099EE7 /* CityServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90EB6127F2192000099EE7 /* CityServiceTest.swift */; };
+		BB90EB6427F22F4B00099EE7 /* SortHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90EB6327F22F4B00099EE7 /* SortHelpers.swift */; };
+		BB90EB6527F22F4B00099EE7 /* SortHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90EB6327F22F4B00099EE7 /* SortHelpers.swift */; };
+		BB90EB6627F22F4B00099EE7 /* SortHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90EB6327F22F4B00099EE7 /* SortHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,7 @@
 		BB90EB4C27F20C7A00099EE7 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		BB90EB5427F2159300099EE7 /* MockCityCiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCityCiew.swift; sourceTree = "<group>"; };
 		BB90EB6127F2192000099EE7 /* CityServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceTest.swift; sourceTree = "<group>"; };
+		BB90EB6327F22F4B00099EE7 /* SortHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +170,6 @@
 				BB90EB3027F1DCF800099EE7 /* Services */,
 				BB0327B327EF3CE70040026A /* Core */,
 				BB0327AC27EF39CC0040026A /* Resources */,
-				BB03277727EF37140040026A /* AppDelegate.swift */,
 				BB03277B27EF37140040026A /* ViewController.swift */,
 				BB03277D27EF37140040026A /* Main.storyboard */,
 				BB03278227EF37160040026A /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 		BB0327B327EF3CE70040026A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BB03277727EF37140040026A /* AppDelegate.swift */,
 				BB0327B427EF3CF00040026A /* Factory.swift */,
 				BB0327B727EF3D030040026A /* Coordinator.swift */,
 			);
@@ -236,6 +240,7 @@
 			children = (
 				BB7DB37727F1D9F60086BE5B /* Nibbed.swift */,
 				BB90EB3627F1DE3800099EE7 /* Singleton.swift */,
+				BB90EB6327F22F4B00099EE7 /* SortHelpers.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 				BB90EB3227F1DD1500099EE7 /* CitiesService.swift in Sources */,
 				BB90EB4D27F20C7A00099EE7 /* CityTableViewCell.swift in Sources */,
 				BB0327B127EF3A7A0040026A /* CityModel.swift in Sources */,
+				BB90EB6427F22F4B00099EE7 /* SortHelpers.swift in Sources */,
 				BB03277827EF37140040026A /* AppDelegate.swift in Sources */,
 				BB0327B527EF3CF00040026A /* Factory.swift in Sources */,
 				BB90EB4427F2042100099EE7 /* MapPresenter.swift in Sources */,
@@ -444,6 +450,7 @@
 				BB90EB5B27F2167B00099EE7 /* AppDelegate.swift in Sources */,
 				BB90EB4527F2042100099EE7 /* MapPresenter.swift in Sources */,
 				BB03278F27EF37160040026A /* City_SearchTests.swift in Sources */,
+				BB90EB6527F22F4B00099EE7 /* SortHelpers.swift in Sources */,
 				BB90EB5627F2159300099EE7 /* MockCityCiew.swift in Sources */,
 				BB90EB6227F2192000099EE7 /* CityServiceTest.swift in Sources */,
 				BB90EB3E27F2040C00099EE7 /* MapVC.swift in Sources */,
@@ -466,6 +473,7 @@
 				BB90EB3F27F2040C00099EE7 /* MapVC.swift in Sources */,
 				BB90EB4827F2085400099EE7 /* Nibbed.swift in Sources */,
 				BB03279927EF37160040026A /* City_SearchUITests.swift in Sources */,
+				BB90EB6627F22F4B00099EE7 /* SortHelpers.swift in Sources */,
 				BB90EB5E27F2169700099EE7 /* Factory.swift in Sources */,
 				BB90EB3927F1DE3800099EE7 /* Singleton.swift in Sources */,
 				BB03279B27EF37160040026A /* City_SearchUITestsLaunchTests.swift in Sources */,

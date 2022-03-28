@@ -20,17 +20,22 @@ public class CitiesPresenter: CitiesPresenterProtocol {
     
     var view: CitiesViewProtocol
     var coordinator: Coordinator?
-    var cities: [City]
+    var cities: [City] = []
+    var map: [String: [City]] = [:]
     
     init(view: CitiesViewProtocol, cities: [City]) {
         self.view = view
-        self.cities = cities.sorted(by: { $0.name < $1.name })
+        setUpData(cities)
     }
 
     func filterCities(by char: String) -> [City] {
-        return cities.filter { city in
-            city.name.lowercased().starts(with: char.lowercased())
+        let key = char.prefix(1).lowercased()
+        if key.isEmpty {
+            return cities
         }
+        return map[key]?.filter { city in
+            city.name.lowercased().starts(with: char.lowercased())
+        } ?? []
     }
 
     func getAllCities() -> [City] {
@@ -40,4 +45,18 @@ public class CitiesPresenter: CitiesPresenterProtocol {
     func showMap(_ city: City) {
         coordinator?.openMap(with: city)
     }
+    
+    private func setUpData(_ cities: [City]) {
+        for city in cities {
+            let key = city.name.prefix(1).lowercased()
+            if map[key]?.isEmpty ?? true {
+                map[key] = [city]
+            } else {
+                map[key]?.append(city)
+            }
+        }
+        self.cities = cities.quicksort(comparison: { $0 < $1 })
+        
+    }
 }
+
