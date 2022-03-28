@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct City: Decodable {
+public struct City: Decodable {
     var displayTitle: String {
         return name + ", " + country
     }

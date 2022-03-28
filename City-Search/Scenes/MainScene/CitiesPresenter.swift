@@ -6,7 +6,7 @@
 //
 
 import Foundation
-protocol CitiesViewProtocol {
+public protocol CitiesViewProtocol {
     // For future expanding
 }
 protocol CitiesPresenterProtocol: AnyObject {
@@ -16,7 +16,7 @@ protocol CitiesPresenterProtocol: AnyObject {
     func showMap(_ city: City)
 }
 
-class CitiesPresenter: CitiesPresenterProtocol {
+public class CitiesPresenter: CitiesPresenterProtocol {
     
     var view: CitiesViewProtocol
     var coordinator: Coordinator?
@@ -29,7 +29,7 @@ class CitiesPresenter: CitiesPresenterProtocol {
 
     func filterCities(by char: String) -> [City] {
         return cities.filter { city in
-            city.name.starts(with: char)
+            city.name.lowercased().starts(with: char.lowercased())
         }
     }
 

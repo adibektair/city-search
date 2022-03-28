@@ -23,7 +23,8 @@ class CitiesVC: UITableViewController, CitiesViewProtocol, Nibbed, UISearchBarDe
     
     // MARK: - UI Setting up
     private func setUpUI() {
-        tableView.reloadData()
+        tableView.register(UINib(nibName: CityTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: CityTableViewCell.reuseIdentifier)
+        tableView.rowHeight = 75
         searchBar.searchBarStyle = .default
         searchBar.placeholder = "Search..."
         searchBar.sizeToFit()
@@ -48,12 +49,8 @@ class CitiesVC: UITableViewController, CitiesViewProtocol, Nibbed, UISearchBarDe
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let city = citiesList[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = city.displayTitle
-        content.secondaryText = city.displaySubtitle
-        cell.contentConfiguration = content
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.reuseIdentifier, for: indexPath) as! CityTableViewCell
+        cell.fillData(citiesList[indexPath.row])
         return cell
     }
 

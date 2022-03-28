@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class CitiesService {
+final public class CitiesService {
     
     static let fileName = "cities"
     @Singleton static var shared = CitiesService()
