@@ -14,6 +14,7 @@ class City_SearchTests: XCTestCase {
         let citiesPresenter = CitiesPresenter(view: MockCityView(), cities: getMockCities())
         var result: [City] = citiesPresenter.filterCities(by: "A")
         XCTAssertEqual(result.count, 4)
+        XCTAssertFalse(result.map{ $0.country }.contains("AU"))
         result = citiesPresenter.filterCities(by: "a")
         XCTAssertEqual(result.count, 4)
         result = citiesPresenter.filterCities(by: "al")
@@ -22,6 +23,7 @@ class City_SearchTests: XCTestCase {
         XCTAssertEqual(result.count, 1)
         result = citiesPresenter.filterCities(by: "s")
         XCTAssertEqual(result.count, 1)
+        XCTAssertTrue(result.first?.country == "AU")
     }
 
     func getMockCities() -> [City] {
